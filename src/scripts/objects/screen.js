@@ -23,6 +23,27 @@ const screen = {
                                                     </ul>
                                                 </div>`
             }
+        let eventsItens = ""
+            user.events.forEach(event => {
+                if(event.type === 'PushEvent'){
+                    eventsItens += `<li><span>${event.repo.name}</span> - ${event.payload.commits[0].message}</li>`
+                }else if(event.type ==='CreateEvent'){
+                    eventsItens += `<li><span>${event.repo.name}</span> - create event</li>`
+                }
+            })
+            if(user.events.length >0){
+                this.userProfile.innerHTML +=   `<div class ="section events">
+                                                    <h2>Events</h2>
+                                                    <ul>
+                                                        ${eventsItens}
+                                                    </ul>
+                                                </div>`
+            }else{
+                this.userProfile.innerHTML +=   `<div class ="section events">
+                                                    <h2>Events</h2>
+                                                    <h3>nao possui events 😢</h3>
+                                                </div>`
+            }
     },
     renderNotFound(){
         this.userProfile.innerHTML = "<h3>usuario nao encontrado<h3>"

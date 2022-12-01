@@ -1,5 +1,6 @@
 import {getUser} from '/src/scripts/services/user.js'
 import {getUserRepos} from '/src/scripts/services/userRepos.js'
+import { getUserEvents } from '/src/scripts/services/events.js'
 import {user} from '/src/scripts/objects/user.js'
 import {screen} from '/src/scripts/objects/screen.js'
 
@@ -13,8 +14,10 @@ async function getUserData(userProfile){
         return
     }
     const repositoriesResponse = await getUserRepos(userProfile)
+    const eventsResponse = await getUserEvents(userProfile)
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
+    user.setEvents(eventsResponse)
     screen.renderUse(user)
 }
 function validateEmptyInput(userProfile){

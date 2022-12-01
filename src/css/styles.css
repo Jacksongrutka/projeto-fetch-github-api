@@ -156,6 +156,10 @@ main {
   background-color:hotpink;
   color: #fff
 }
+.container .profile-data .events span{
+  font-weight: 700;
+  color: hotpink;
+}
 
 .container .profile-data.hide{
   display: none;

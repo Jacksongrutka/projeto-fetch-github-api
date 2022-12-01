@@ -4,6 +4,7 @@ const user = {
     bio: '',
     userName:'',
     repositories:[],
+    events:[],
     setInfo(gitHubUser){
         this.avatarUrl = gitHubUser.avatar_url
         this.name = gitHubUser.name
@@ -14,8 +15,21 @@ const user = {
     },
     setRepositories(repositories){
         this.repositories = repositories
-    }
-    
-}
+    },
+    setEvents(events){
+        let onlyCreateAndPushEvent = events.filter(function(event){
+            return event.type === 'PushEvent' || event.type === 'CreateEvent'
+        })
 
-export { user}
+        let eventsQuantity = []
+
+        onlyCreateAndPushEvent.forEach(function(event){
+            if(eventsQuantity.length <= 9){
+                eventsQuantity.push(event)
+            }
+        })
+        this.events = eventsQuantity
+        
+    },
+}
+export { user }
