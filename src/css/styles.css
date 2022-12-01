@@ -120,6 +120,15 @@ main {
   font-weight: 400;
   line-height: 23px;
 }
+.container .profile-data .info .follow{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.container .profile-data .info .follow h3{
+  font-size: 15px;
+  font-weight: 700;
+}
 
 /* REPOSITORIES */
 

@@ -23,7 +23,6 @@ function validateEmptyInput(userProfile){
         return true
     }
 }
-
 btn.addEventListener('click', () => {
     let userProfile = input.value
     if(validateEmptyInput(userProfile)) return
