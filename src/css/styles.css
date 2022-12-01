@@ -151,6 +151,15 @@ main {
   border-radius: 7px;
   transition: 0.3s ease-in-out;
 }
+.container .profile-data .repositories ul li a .icon-container{
+  display: flex;
+  justify-content: space-around;
+}
+.container .profile-data .repositories ul li a .icon-container .icon{
+  background-color: blueviolet;
+  padding: 5px;
+  margin: 1px;
+}
 
 .container .profile-data .repositories ul li a:hover{
   background-color:hotpink;

@@ -18,6 +18,7 @@ async function getUserData(userProfile){
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
     user.setEvents(eventsResponse)
+    console.log(user)
     screen.renderUse(user)
 }
 function validateEmptyInput(userProfile){
@@ -40,3 +41,4 @@ input.addEventListener('keyup', (e) => {
         getUserData(userProfile)
     }
 })
+getUserData("devemdobro")
