@@ -41,4 +41,3 @@ input.addEventListener('keyup', (e) => {
         getUserData(userProfile)
     }
 })
-getUserData("devemdobro")
