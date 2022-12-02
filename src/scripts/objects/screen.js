@@ -13,7 +13,7 @@ const screen = {
                                         </div>
                                       </div>`
         let repositoriesItens = ""
-            user.repositories.forEach(repo => repositoriesItens += `<li><a href ="${repo.html_url}" targer_blank><div class="name">${repo.name}</div>
+            user.repositories.forEach(repo => repositoriesItens += `<li><a href ="${repo.html_url}" target_blank><div class="name">${repo.name}</div>
                                                                         <div class ="icon-container">
                                                                             <div class="icon">🍴 ${repo.forks_count}</div>
                                                                             <div class="icon">⭐ ${repo.stargazers_count}</div>
