@@ -30,6 +30,6 @@ const user = {
         })
         this.events = eventsQuantity
         
-    },
+    }
 }
 export { user }
