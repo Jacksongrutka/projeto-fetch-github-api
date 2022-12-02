@@ -1,8 +1,8 @@
-import {getUser} from '/src/scripts/services/user.js'
-import {getUserRepos} from '/src/scripts/services/userRepos.js'
-import { getUserEvents } from '/src/scripts/services/events.js'
-import {user} from '/src/scripts/objects/user.js'
-import {screen} from '/src/scripts/objects/screen.js'
+import {getUser} from './services/user.js'
+import {getUserRepos} from './services/userRepos.js'
+import { getUserEvents } from './services/events.js'
+import {user} from './objects/user.js'
+import {screen} from './objects/screen.js'
 
 const btn = document.getElementById("btn-search")
 const input = document.getElementById("input-search")
